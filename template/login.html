@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="/static/styles/main.css">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>Login page</title>
+    </head>
+    <body>
+        <div class="my_container">
+            <div class="center"><h1>QuickFixHub</h1></div>
+            <div class="my_panel">
+                <div class="center"><h3>Login</h3></div>
+                <form action="/login" method="POST">
+                <div class="input_form">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">User name</label>
+                        <input type="text" class="form-control" name = "user_name" id="user_name" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" name = "password" id="user_name" placeholder="password">
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-primary">login</button>
+                        <!-- <div class="err_msg">{{msg}}</div> -->
+                    </div>
+                    <div class="center">
+                        <a href="/register">Register as Customer</a>
+                    </div>
+                    <div class="center">
+                        <a href="/register">Register as Professional</a>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
